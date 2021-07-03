@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<style>
+    body {
+      background-image: url('static/1093633.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+    
+      background-size: cover;
+    }
+    </style>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Sentiment </title>
+        <style>
+            div {text-align: center;}
+            h2
+            {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 100px;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font"></span> Sentiment Analyser</h2>
+            <h2 style="text-align:center;" </h2>
+            <div class='description'>
+                <h3>Amazon Rating Analysis</h3>
+                <style>
+                    h3
+                    {
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        font-size: 50px;
+                    }
+                </style>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+        		<textarea class='message-box' name="message" rows="15" cols="75" placeholder="Enter Your Review Here..."></textarea><br/>
+        		<input type="submit" class="my-cta-button" value="Submit">
+        	</form>
+    	</div>
+
+       
+
+    </body>
+</html>

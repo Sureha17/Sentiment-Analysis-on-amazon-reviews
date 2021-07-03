@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<style>
+    body {
+      background-image: url('static/1093633.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+    
+      background-size: cover;
+    }
+    </style>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+        
+        
+	</head>
+
+	<body>
+
+		
+
+		<!-- Result -->
+		<style>
+            div {text-align: center;}
+            h2
+            {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 100px;
+            }
+        </style>
+		<div class="results">
+			{% if prediction==1 %}
+				<h1><span class='safe'>Great! This is a POSITIVE Review.</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='positive-review.webp') }}" alt="Positive Review">
+			{% elif prediction==0 %}
+				<h1><span class='danger'>Oops! This is a NEGATIVE Review.</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='negative-review.webp') }}" alt="Negative Review">
+			{% endif %}
+		</div>
+
+		<!-- Footer -->
+	
+
+	</body>
+</html>
